@@ -1,32 +1,31 @@
-# Fraud Detection using Graph Neural Networks (GNN)
+# Financial Network Fraud Detection using Graph Neural Networks
 
 ## Overview
 
-This project implements a **Graph Neural Network based fraud detection system** to identify fraudulent transactions in financial networks.
+Financial fraud often occurs through networks of connected accounts and transactions rather than isolated events. Traditional machine learning models struggle to capture these complex relationships.
 
-Traditional fraud detection models treat transactions independently.
-However, fraud often occurs in **connected networks of accounts and transactions**.
+This project aims to detect **fraudulent financial activities** by modeling transaction data as a **graph** and applying **Graph Neural Networks (GNNs)**.
 
-Graph Neural Networks help capture these **relational patterns**.
-
----
-
-## Features
-
-* Graph-based fraud detection
-* Transaction network modeling
-* Node classification using GNN
-* Data preprocessing and graph construction
-* Model training and evaluation
+The model analyzes relationships between accounts, transactions, and entities to identify suspicious patterns such as fraud rings or money laundering networks.
 
 ---
 
-## Tech Stack
+## Objectives
+
+* Model financial transactions as a graph structure
+* Detect suspicious accounts or transactions
+* Apply Graph Neural Networks for fraud detection
+* Analyze patterns in financial transaction networks
+
+---
+
+## Technologies Used
 
 * Python
 * PyTorch
 * PyTorch Geometric
 * NetworkX
+* Pandas
 * Scikit-learn
 
 ---
@@ -37,13 +36,19 @@ Graph Neural Networks help capture these **relational patterns**.
 Fraud-Detection-GNN
 │
 ├── data
+│   ├── raw
+│   └── processed
+│
 ├── notebooks
+│   └── exploration.ipynb
+│
 ├── src
 │   ├── models
 │   ├── utils
 │   └── train.py
 │
 ├── experiments
+│
 ├── main.py
 ├── requirements.txt
 └── README.md
@@ -51,34 +56,26 @@ Fraud-Detection-GNN
 
 ---
 
-## Installation
+## Workflow
 
-```bash
-git clone https://github.com/aishwary-vansh/Fraud-Detection-GNN.git
-cd Fraud-Detection-GNN
-pip install -r requirements.txt
-```
-
----
-
-## Run the Project
-
-```bash
-python main.py
-```
+1. Load transaction dataset
+2. Preprocess financial data
+3. Convert transactions into a graph
+4. Train a Graph Neural Network model
+5. Detect fraudulent nodes or transactions
 
 ---
 
-## Future Work
+## Future Improvements
 
-* Graph Attention Networks
+* Graph Attention Networks (GAT)
 * Temporal fraud detection
-* Real-time fraud detection systems
-* Large-scale graph processing
+* Real-time fraud detection pipelines
+* Large-scale financial graph analysis
 
 ---
 
 ## Author
 
-**Aishwary Vansh**
-B.Tech CSE (2024–2028)
+Aishwary Vansh
+B.Tech Computer Science Engineering (2024–2028)
